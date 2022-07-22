@@ -9,7 +9,7 @@ class Mkulima{
             this.farms.push(farmer)
         }
         this.removeFarm = (farmId)=>{
-            let index= this.farms.findIndex(item=>item.farmId===id)
+            let index= this.farms.findIndex(item=>item.farmId===farmId)
             this.farms.splice(index,1)
             return this.farms
 
@@ -32,7 +32,7 @@ class Mkulima{
 
        }
         this.removeProduct = (productId) => {
-            let index= this.farms.findIndex(item=>item.productId===id)
+            let index= this.farms.findIndex(item=>item.productId===productId)
             this.farms.splice(index,1)
             return this.products
 
