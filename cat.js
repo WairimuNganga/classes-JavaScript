@@ -32,7 +32,7 @@ class Mkulima{
 
        }
         this.removeProduct = (productId) => {
-            let index= this.farms.findIndex(item=>item.productId===productId)
+            let index= this.products.findIndex(item=>item.productId===productId)
             this.farms.splice(index,1)
             return this.products
 
@@ -58,8 +58,6 @@ class Mkulima{
     }
   
 }
-
-
 let farm = new Mkulima();
 farm.addFarm("125b","Cows","Lisa","112890", "Longisa");
 farm.addFarm("120a","Kales","Uhania","112789", "Mau");
@@ -67,28 +65,16 @@ farm.addFarm("105a","Apples","Killan","112490", "Limuru");
 farm.addFarm("135a","Fish","linet","112900", "Siaya");
 
 console.log(farm.farms);
-
 console.log(farm.removeFarm("105a"));
-
 farm.updateFarm("125b","Lina","Sheep","112400", "Narok");
-
 farm.getFarm("120a");
-
 farm.addProduct("1","kales",200);
 farm.addProduct("2","apple juice",460);
 farm.addProduct("3","mutton",300);
 farm.addProduct("4","milk",100);
-console.log(farm.products);
 
+console.log(farm.products);
 console.log(farm.removeProduct("2"));
-
-
-
-console.log(farm.updateProduct("1","butter",20));
-console.log(farm.products);
-
 console.log(farm.getProduct("4"));
-
 console.log(farm.printProducts());
-
 console.log(farm.calculateOrderCost("1",10)); 
